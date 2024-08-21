@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank
+    driver-class-name: org.postgresql.Driver
+    username: bankuser
+    password: password
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+
+
+
+#spring.jpa.hhibernate.hbm2ddl.extra_physical_table_types=PARTITIONED TABLE
+
+twelvedata:
+  api:
+    base-url: "https://api.twelvedata.com/time_series"
+    key: # ваш ключ
